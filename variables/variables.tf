@@ -20,3 +20,38 @@ variable "ec2_tags" {
   }
   
 }
+
+variable "sg_name" {
+  type = string
+  default = "allow-all-terraform"
+}
+
+variable "sg_descriptoin" {
+  type = string
+  default = "Allow TLS inbound traffic and all outbound traffic"  
+}
+
+variable "sg_from_port" {
+  type = number
+  default = 0
+}
+
+variable "sg_to_port" {
+  type = number
+  default = 0
+}
+
+variable "cidr_blocks" {
+  type = list
+  default = ["0.0.0.0/0"]
+}
+
+variable "sg_tags" {
+  type = map
+  default = {
+    Name = "allow-all-terraform"
+    Project = "Roboshop"
+    terraform = "true"
+    Environment = "dev"
+  }
+  }
