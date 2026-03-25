@@ -13,12 +13,11 @@ variable "instance_type" {
 variable "ec2_tags" {
   type = map
   default = {
-    Name = "Variables-demo"
-    Project = "Roboshop"
-    terraform = "true"
+    Name = "variables-demo"
+    Project = "roboshop"
+    Terraform = "true"
     Environment = "dev"
   }
-  
 }
 
 variable "sg_name" {
